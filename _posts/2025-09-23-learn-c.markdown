@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "I'm trying to learn C lang"
+date:   2025-09-23 16:38:24 +0700
+categories: life, programming, c
+---
+
+I'm trying to learn c language again.
+Mostly, I vibecoded my projects at work this days. So I need to find that 'spark' again.
+
