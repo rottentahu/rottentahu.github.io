@@ -9,6 +9,151 @@
     {%- include google-analytics.html -%}
   {%- endif -%}
   
+  <!-- Theme CSS -->
+  <style>
+    /* Theme variables */
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #333333;
+      --border-color: #e5e5e5;
+      --link-color: #007bff;
+      --link-hover-color: #0056b3;
+      --code-bg: #f8f9fa;
+      --blockquote-bg: #f8f9fa;
+      --footer-bg: #f8f9fa;
+      --footer-border: #e9ecef;
+    }
+    
+    /* Dark theme variables */
+    .dark-theme {
+      --bg-color: #1a1a1a;
+      --text-color: #e0e0e0;
+      --border-color: #333333;
+      --link-color: #4dabf7;
+      --link-hover-color: #339af0;
+      --code-bg: #2d2d2d;
+      --blockquote-bg: #2d2d2d;
+      --footer-bg: #2d2d2d;
+      --footer-border: #404040;
+    }
+    
+    /* Apply theme variables */
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    a {
+      color: var(--link-color);
+    }
+    
+    a:hover {
+      color: var(--link-hover-color);
+    }
+    
+    /* Theme toggle button */
+    .theme-toggle {
+      background: var(--code-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-left: 1rem;
+      vertical-align: middle;
+      text-decoration: none;
+      outline: none;
+    }
+    
+    .theme-toggle:hover {
+      transform: scale(1.1);
+      text-decoration: none;
+    }
+    
+    .theme-toggle:focus {
+      outline: 2px solid var(--link-color);
+      outline-offset: 2px;
+    }
+    
+    .theme-toggle .icon {
+      width: 18px;
+      height: 18px;
+      color: var(--text-color);
+    }
+    
+    /* Dark theme overrides for common elements */
+    .dark-theme .site-footer {
+      background: var(--footer-bg);
+      border-top-color: var(--footer-border);
+    }
+    
+    .dark-theme .site-header {
+      background: var(--footer-bg);
+      border-bottom-color: var(--footer-border);
+    }
+    
+    .dark-theme .site-title {
+      color: var(--text-color);
+    }
+    
+    .dark-theme .page-link {
+      color: var(--text-color);
+    }
+    
+    .dark-theme .page-link:hover {
+      color: var(--link-color);
+    }
+    
+    .dark-theme .menu-icon svg {
+      fill: var(--text-color);
+    }
+    
+    .dark-theme .post-content {
+      background: var(--bg-color);
+    }
+    
+    .dark-theme .highlight {
+      background: var(--code-bg);
+    }
+    
+    .dark-theme blockquote {
+      background: var(--blockquote-bg);
+      border-left-color: var(--border-color);
+    }
+    
+    .dark-theme code {
+      background: var(--code-bg);
+      color: var(--text-color);
+    }
+    
+    .dark-theme pre {
+      background: var(--code-bg);
+      border-color: var(--border-color);
+    }
+    
+    .dark-theme .categories-page h1 {
+      border-bottom-color: var(--border-color);
+    }
+    
+    .dark-theme .category-section {
+      border-color: var(--border-color);
+    }
+    
+    /* Social media icons in dark theme */
+    .dark-theme .social-media-list a {
+      color: var(--text-color);
+    }
+    
+    .dark-theme .social-media-list a:hover {
+      color: var(--link-color);
+    }
+  </style>
+  
   <!-- Early theme detection to prevent flash -->
   <script>
     (function() {
