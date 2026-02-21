@@ -3,3 +3,134 @@
 ---
 
 @import "minima";
+
+// Dark theme styles
+:root {
+  --dark-bg-color: #1a1a1a;
+  --dark-text-color: #e0e0e0;
+  --dark-grey-color: #a0a0a0;
+  --dark-grey-color-light: #404040;
+  --dark-grey-color-dark: #d0d0d0;
+  --dark-border-color: #404040;
+}
+
+html.dark-theme {
+  body {
+    background-color: var(--dark-bg-color);
+    color: var(--dark-text-color);
+  }
+
+  // Site header in dark mode
+  .site-header {
+    border-bottom-color: var(--dark-border-color);
+    background-color: var(--dark-bg-color);
+  }
+
+  .site-title {
+    &,
+    &:visited {
+      color: var(--dark-grey-color-dark);
+    }
+  }
+
+  // Navigation in dark mode
+  .site-nav {
+    background-color: var(--dark-bg-color);
+    border-color: var(--dark-border-color);
+
+    .page-link {
+      color: var(--dark-text-color);
+    }
+
+    // Mobile navigation (hamburger menu)
+    @media screen and (max-width: 600px) {
+      background-color: var(--dark-bg-color);
+      border-color: var(--dark-border-color);
+
+      .menu-icon svg {
+        fill: var(--dark-grey-color-dark);
+      }
+
+      .trigger {
+        background-color: var(--dark-bg-color);
+        
+        .page-link {
+          color: var(--dark-text-color);
+          
+          &:hover {
+            color: var(--dark-grey-color-dark);
+          }
+        }
+      }
+    }
+  }
+
+  // Theme toggle button
+  .theme-toggle {
+    color: var(--dark-text-color);
+    
+    .icon {
+      fill: var(--dark-text-color);
+    }
+  }
+
+  // Site footer
+  .site-footer {
+    border-top-color: var(--dark-border-color);
+  }
+
+  .footer-col-wrapper {
+    color: var(--dark-grey-color);
+  }
+
+  // Links
+  a {
+    color: #66b3ff;
+
+    &:visited {
+      color: #4da6ff;
+    }
+
+    &:hover {
+      color: var(--dark-grey-color-dark);
+    }
+  }
+
+  // Code blocks
+  pre,
+  code {
+    background-color: #2d2d2d;
+    border-color: var(--dark-border-color);
+    color: var(--dark-text-color);
+  }
+
+  // Blockquotes
+  blockquote {
+    color: var(--dark-grey-color);
+    border-left-color: var(--dark-grey-color-light);
+  }
+
+  // Tables
+  table {
+    color: var(--dark-text-color);
+    border-color: var(--dark-border-color);
+
+    tr:nth-child(even) {
+      background-color: #2d2d2d;
+    }
+
+    th {
+      background-color: #333333;
+      border-color: var(--dark-border-color);
+    }
+
+    td {
+      border-color: var(--dark-border-color);
+    }
+  }
+
+  // SVG icons
+  .svg-icon {
+    fill: var(--dark-grey-color);
+  }
+}
